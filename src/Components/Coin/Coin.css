@@ -1,0 +1,14 @@
+.Coin {
+  border: thin solid darkgrey;
+  width: 200px;
+  border-radius: 100px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Coin-text {
+  font-size: xx-large;
+  text-transform: uppercase;
+}

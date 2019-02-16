@@ -1,0 +1,9 @@
+.Flipper {
+  background-color: unset;
+  border-radius: 5px;
+  height: 4em;
+  max-width: 150px;
+  min-height: 4em;
+  text-transform: uppercase;
+  width: 50vw;
+}
