@@ -14,7 +14,7 @@ class Home extends React.Component {
         </div>
         <main className="Home-main">
           <section className="Home-main-section">
-            <Coin side="heads" />
+            <Coin side="tails" />
           </section>
           <section>
             <Flipper />

@@ -1,9 +1,12 @@
 .Flipper {
-  background-color: unset;
+  background-color: #8a3a3b;
   border-radius: 5px;
-  height: 4em;
-  max-width: 150px;
+  max-width: 200px;
   min-height: 4em;
   text-transform: uppercase;
   width: 50vw;
+  border: none;
+  color: white;
+  font-size: medium;
+  letter-spacing: 3px;
 }

@@ -1,14 +1,16 @@
 .Coin {
-  border: thin solid darkgrey;
   width: 200px;
   border-radius: 100px;
   height: 200px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: #efc75e;
+  color: #936b1b;
 }
 
 .Coin-text {
   font-size: xx-large;
+  letter-spacing: 5px;
   text-transform: uppercase;
 }
