@@ -5,14 +5,11 @@ import "./Coin.css";
 
 const toSideText = side => (side ? HEADS : TAILS);
 
-export const Coin = ({ side }) => {
-  const sideText = toSideText(side);
-  return (
-    <div className={`Coin Coin-${sideText}`}>
-      <p className="Coin-text">{sideText}</p>
-    </div>
-  );
-};
+export const Coin = ({ side }) => (
+  <div className="Coin">
+    <p className="Coin-text">{toSideText(side)}</p>
+  </div>
+);
 
 const mapStateToProps = ({ side }) => ({
   side

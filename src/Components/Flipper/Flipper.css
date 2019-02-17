@@ -1,14 +1,14 @@
 .Flipper {
   background-color: #8a3a3b;
   border-radius: 5px;
-  max-width: 200px;
+  max-width: 250px;
   min-height: 4em;
   text-transform: uppercase;
-  width: 50vw;
+  width: 75vw;
   border: none;
   color: white;
   font-size: medium;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   outline: none;
 }
 
