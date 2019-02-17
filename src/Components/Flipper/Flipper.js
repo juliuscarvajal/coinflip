@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 import * as SideActions from "../../common/actions";
 import "./Flipper.css";
 
-const Flipper = ({ getRandomSide }) => (
+export const Flipper = ({ getRandomSide }) => (
   <button className="Flipper" onClick={getRandomSide}>
     Flip Coin
   </button>
