@@ -3,16 +3,19 @@ import { connect } from "react-redux";
 import { HEADS, TAILS } from "../../common/constants";
 import "./Coin.css";
 
-export const Coin = ({ side }) => (
-  <div className="Coin">
-    <p className="Coin-text">{side ? HEADS : TAILS}</p>
-  </div>
-);
+const toSideText = side => (side ? HEADS : TAILS);
 
-const mapStateToProps = state => {
-  return {
-    side: state.side
-  };
+export const Coin = ({ side }) => {
+  const sideText = toSideText(side);
+  return (
+    <div className={`Coin Coin-${sideText}`}>
+      <p className="Coin-text">{sideText}</p>
+    </div>
+  );
 };
+
+const mapStateToProps = ({ side }) => ({
+  side
+});
 
 export default connect(mapStateToProps)(Coin);

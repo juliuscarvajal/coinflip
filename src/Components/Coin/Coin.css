@@ -14,3 +14,13 @@
   letter-spacing: 5px;
   text-transform: uppercase;
 }
+
+.Coin-heads {
+  background-color: #fcd36d;
+  transition: 0.5s ease-in-out;
+}
+
+.Coin-tails {
+  background-color: #f3bc33;
+  transition: 0.5s ease-in-out;
+}
