@@ -1,6 +1,19 @@
 import React from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as SideActions from "../../common/actions";
 import "./Flipper.css";
 
-const Flipper = () => <button className="Flipper">Flip Coin</button>;
+const Flipper = ({ toggleSide }) => (
+  <button className="Flipper" onClick={toggleSide}>
+    Flip Coin
+  </button>
+);
 
-export default Flipper;
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(SideActions, dispatch);
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Flipper);

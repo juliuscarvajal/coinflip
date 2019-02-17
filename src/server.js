@@ -1,8 +1,10 @@
 import express from "express";
 import React from "react";
 import { renderToString } from "react-dom/server";
+import { Provider } from "react-redux";
 import { StaticRouter } from "react-router-dom";
 import App from "./App";
+import configureStore from "./common/store/configureStore";
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
@@ -11,12 +13,17 @@ server
   .disable("x-powered-by")
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .get("/*", (req, res) => {
+    const store = configureStore({});
     const context = {};
     const markup = renderToString(
       <StaticRouter context={context} location={req.url}>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </StaticRouter>
     );
+
+    const finalState = store.getState();
 
     if (context.url) {
       res.redirect(context.url);
@@ -42,6 +49,9 @@ server
     </head>
     <body>
         <div id="root">${markup}</div>
+        <script>
+          window.__PRELOADED_STATE__ = ${JSON.stringify(finalState)}
+        </script>
     </body>
 </html>`
       );

@@ -9,4 +9,9 @@
   color: white;
   font-size: medium;
   letter-spacing: 3px;
+  outline: none;
+}
+
+.Flipper:active {
+  background-color: #d15b5d;
 }

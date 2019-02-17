@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./coin-svgrepo-com.svg";
-import Coin from "./Components/Coin";
-import Flipper from "./Components/Flipper";
+import Coin from "./components/Coin";
+import Flipper from "./components/Flipper";
 import "./Home.css";
 
 class Home extends React.Component {
@@ -14,7 +14,7 @@ class Home extends React.Component {
         </div>
         <main className="Home-main">
           <section className="Home-main-section">
-            <Coin side="tails" />
+            <Coin />
           </section>
           <section>
             <Flipper />
